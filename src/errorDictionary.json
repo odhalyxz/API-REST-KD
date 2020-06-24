@@ -1,0 +1,13 @@
+{
+    "database 1":{
+        "name": "DataBaseError",
+        "message": "Error en MongoDB al  crear un registro",
+        "id": "api-kdrama 1"
+    },
+    "request 2":{
+        "name": "DatosFaltantesError",
+        "message": "No tiene todos los datos necesarios en la peticion",
+        "id": "request 2"
+    }
+    
+}
