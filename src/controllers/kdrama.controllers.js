@@ -4,7 +4,7 @@ const createError = require('../helpers/errors');
 
 kdramaCtrl.createNewKdrama = async (req,res) => {
     
-    let { title, episodes } = req.body;
+    let { title, episodes, release, gender, network , write, director } = req.body;
     
     if (!title || !episodes) {
         let error =  createError("request 2");
@@ -12,10 +12,7 @@ kdramaCtrl.createNewKdrama = async (req,res) => {
         res.status(500).send(error.message);
         
     }else{
-        let obj_kdrama = {
-            title,
-            episodes
-        }
+        let obj_kdrama = { title, episodes, release, gender, network , write, director }
         let newKdrama = new Kdrama(obj_kdrama);
         try {
             let created = await newKdrama.save();
