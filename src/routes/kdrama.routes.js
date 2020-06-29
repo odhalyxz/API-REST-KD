@@ -25,6 +25,10 @@ router.get("/kdramas/:id", getKdrama);
 router.put("/kdramas/edit/:id", updateKdrama);
 
 // Delete Kdramas
-router.delete("/kdramas/delete/:id", deleteKdrama);
+//router.delete("/kdramas/delete/:id", deleteKdrama);
+router.get("/kdramas/delete/:id", deleteKdrama);
+// 
+
+
 
 module.exports = router;
